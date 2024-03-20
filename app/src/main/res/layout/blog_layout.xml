@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/blogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Blog Post Title"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Image (ImageView) -->
+        <ImageView
+            android:id="@+id/blogImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/blogTitle"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/blogDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Blog post description goes here..."
+            android:layout_below="@id/blogImageView"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/selectionIndicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_check_circle_24"
+            android:layout_gravity="end"
+            android:visibility="gone"/>
+
+        <!-- Action Icons -->
+        <LinearLayout
+            android:id="@+id/linearLayoutIcons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/blogDescription"
+            android:layout_marginTop="8dp"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/iconUpdate"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/update"
+                android:layout_marginEnd="16dp"/>
+            <ImageView
+                android:id="@+id/iconDelete"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/delete"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:id="@+id/iconEmail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/email"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:id="@+id/iconSocialMedia"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/twitter"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
